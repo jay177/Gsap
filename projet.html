@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes projet</title>
+  <link rel="stylesheet" href="test/style.css">
+</head>
+<body>
+    <div class="box">
+      <img src="https://www.masculin.com/wp-content/uploads/sites/2/article/11664/vie-quotidienne-stormtroopers-jorge-perez-higuera.jpg" class="text1">
+      <h2 class="text2">you</h2>
+      <h2 class="text3">yea you</h2>
+      <img src="https://fr.web.img4.acsta.net/newsv7/19/07/11/11/17/3018268.jpg" alt="" class="projet">
+    </div>
+    <div class="box1">
+      <h2 class="text4">are you </h2>
+      <h2 class="text5">realy gonna watch</h2>
+      <h2 class="text6">this by yoursel ?</h2>
+      <img src="https://cdn.i-scmp.com/sites/default/files/d8/yp/images/90e78b1e-1190-11ea-82cd-148dc44829b8imagehires134156.jpg" alt="" class="projet">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
+    <script type="text/javascript">
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".box",
+          start: "top top",
+          end: "bottom top",
+          markers: true,
+          scrub : true,
+          pin : true
+
+        }
+      }) 
+      .from(".text1", { x : innerWidth * 1}) 
+      .from(".text2", { x : innerWidth * -1}) 
+      .from(".text3", { x : innerWidth * 1}) 
+      .from(".projet", { y : innerWidth * 1, rotate : 360}) 
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".box1",
+          start: "center center",
+          end: "bottom top",
+          markers: true,
+          scrub : true,
+          pin : true
+
+        }
+      }) 
+      .from(".box1", { opacity : 0 })
+      .from(".text4", { y : innerHeight * -1}) 
+      .from(".text5", { y : innerHeight * 1}) 
+      .from(".text6", { y : innerHeight * -1}) 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700;800&display=swap');
+
+* {
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+}
+
+.txtBackgroud{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: rgb(5, 5, 5);
+}
+
+.txtBackgroud .container {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transform: translate(-50%,-50%);
+}
+
+.txtBackgroud .container h2{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgb(5, 5, 5);
+    font-size: 1em;
+    line-height: 0.9em;
+    letter-spacing: 2px;
+}
+
+.txtBackgroud .container h2 span{
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    animation: animate 5s linear infinite;
+    filter: saturate(5);
+}
+.txtBackgroud .container h2 span.text{
+    animation-delay: -0.5s;
+    filter: saturate(10)
+    hue-rotate(100deg);
+    
+}
+.txtBackgroud .container h2 span.text1{
+    animation-delay: -1s;
+    filter: hue-rotate(100deg)
+    saturate(10);
+    
+}
+
+@keyframes animate {
+    0%,5%,10.1%,15.1%,25.1%,45.1%,70.1%,90%,100%
+    {
+        color: #222;
+        text-shadow: 0 0 0 #222;
+    }
+    5.1%,10%,15.2%,25%,45.1%,70%,90.1%,95%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #1D2551,
+                     0 0 20px #1D2551,
+                     0 0 40px #1D2551,
+                     0 0 80px #1D2551,
+                     0 0 160px #1D2551
+    }
+}
+
+
+.vidBackground{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+.vidBackground h2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 25vw;
+    text-align: center;
+    font-weight: 800;
+    line-height: 0.85em;
+    background: #000;
+    opacity: 100%;
+    color: #fff;
+    mix-blend-mode: multiply;
+    background: rgba(0, 0, 0, 0.95);
+
+}
+.vidBackground h2 span{
+    font-size: 0.4em;
+    line-height: 0.85em;
+}
+.vidBackground video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("https://picsum.photos/id/1025/600/400");
+    background-position: center;
+    background-size: 5%;
+    background-attachment: fixed;
+    
+}
+.scroll{
+    padding: 100px;
+    color: #111;
+    background-color: rgb(2, 2, 2);
+    text-align:center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    
+
+}
+.midlle{
+  grid-column: 2 / 3;
+}
+
+.scroll, iframe {
+  width: 100px;
+  height: 50px;
+  margin: 0 auto;
+
+
+}
+.scroll h2{
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.scroll p{
+  font-size: 1.5em;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+
+.txt{
+      background-color: rgb(6, 6, 6);
+      height: 10vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+}
+
+.music-container {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+  display: flex;
+  padding: 20px 30px;
+  position: fixed;
+  margin: 10px 10px;
+  padding-top: 30px;
+
+  bottom: 0;
+  z-index: 10;
+  right: 0
+}
+
+
+.img-container {
+  position: relative;
+  width: 110px;
+}
+
+.img-container::after {
+  content: '';
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, 50%);
+}
+
+.img-container img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 110px;
+  width: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: rotate 3s linear infinite;
+
+  animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.action-btn {
+  background-color: #fff;
+  border: 0;
+  color: #dfdbdf;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.action-btn.action-btn-big {
+  color: #cdc2d0;
+  font-size: 30px;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+.music-info {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 10px 10px 10px 150px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.music-info h4 {
+  margin: 0;
+}
+
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  background-color: #fe8daa;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+
+.menu{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    background: linear-gradient(#222 ,#7FA0E3);
+    overflow: hidden;
+}
+
+.menu ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu ul li{
+    list-style: none;
+}
+
+.menu ul li a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 4em;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    padding: 20px;
+   
+
+}
+.menu ul li a:hover{
+    color: #222;
+    transform: translateY(-20px);
+    transition-delay: 0s;
+}
+.menu ul li a::before{
+    content: attr(data-text);
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    font-size: 0.35em;
+    font-weight: 500;
+    letter-spacing: 100px;
+    opacity: 0;
+    transition: 0.5s;
+    text-shadow: 0 0 10px #7FA0E3,
+    0 0 30px #7FA0E3,
+    0 0 80px #7FA0E3;
+
+}
+.menu ul li a:hover:before{
+    letter-spacing: 6px;
+    opacity: 1;
+    transition-delay: 0.25s;
+}
+
+.anime{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+/* css transition */
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+
+  
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    
+    
+}
+
+.transi{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transi h2{
+  font-size: 6em;
+  color: #fff;
+  font-weight: 500;
+
+}
+
+.box{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  background: url("../img/wallpaper_the_witcher_3_wild_hunt_32_3440x1440.png");
+  background-size: cover;
+}
+
+.box h2{
+  font-size: 3em;
+
+}
+.box .projet{
+  max-width: 300px;
+
+}
+
+.box1{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  background: #000;
+}
+
+.box1 h2{
+  font-size: 3em;
+
+}
+.box1 .projet{
+  max-width: 300px;
+
+}
+
+.text1{
+  height: 70vh;
+  width: 100%;
+
+}
+
+@media screen and (max-width: 500px) {
+  .music-container {
+    padding: 5px 5px;
+    margin: 10px 10px;
+    padding-top: 15px;
+ 
+  }
+  .img-container::after {
+    content: '';
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 63%;
+    left: 33%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, 50%);
+  }
+  
+  .img-container img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 70px;
+    width: 70px ;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: rotate 3s linear infinite;
+  
+    animation-play-state: paused;
+  }
+  .txtBackgroud{
+  
+    background: red;
+}
+.txtBackgroud .container h2{
+
+
+
+  font-weight: 400;
+  font-size: 3.3em;
+  line-height: 0.9em;
+  letter-spacing: 1px;
+}
+}
